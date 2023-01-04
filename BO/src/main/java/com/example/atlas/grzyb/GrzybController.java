@@ -44,11 +44,17 @@ public class GrzybController {
     }
 
     @PutMapping("/update/{id}")//zaktualizowanie rekordu o konkretnym id
-    public ResponseEntity <Grzyb> updateGrzyb(@PathVariable int id, @RequestBody Grzyb grzyb){
+    public ResponseEntity <Grzyb> updateGrzyb(@PathVariable long id, @RequestBody Grzyb grzyb){
         if (grzyb != null) {
             grzybService.putGrzyb(id,grzyb);
             return new ResponseEntity <>(HttpStatus.ACCEPTED);
         }
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
+    @GetMapping("/search/{word}")//wyświetl wszystkie rekordy zawierające przesłaną fraze w swojej nazwie lub rodzaju
+    public ResponseEntity <List<Grzyb>> getMachingGrzyby(@PathVariable String word){
+        List <Grzyb> list = grzybService.getMachingGrzyby(word);
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 }

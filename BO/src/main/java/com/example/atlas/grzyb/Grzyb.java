@@ -20,8 +20,9 @@ import javax.persistence.*;
 public class Grzyb {
 
     @Id
-    private int id;
+    private long id;
     private String nazwa;
+    private String rodzaj;
     private boolean czy_pod_ochrona;
     private boolean czy_trujacy;
     private String wystepowanie;
