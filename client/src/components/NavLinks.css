@@ -1,0 +1,21 @@
+.nav-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+.nav-wrapper-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+}
+.nav-link{
+    font-size: 14;
+    text-decoration: none;
+    color: #3A506B;
+}
+.nav-link:hover {
+    opacity: 0.8;
+    border-bottom: 1px solid #3A506B;
+}

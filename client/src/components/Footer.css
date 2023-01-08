@@ -1,0 +1,16 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #5BC0BE;
+}
+footer div {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+footer div p {
+    font-size: 11px;
+    margin-left: 5px;
+    color: #3A506B;
+}
