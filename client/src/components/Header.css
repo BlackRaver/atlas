@@ -1,0 +1,10 @@
+.header-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #5BC0BE;
+    padding: 5px;
+}
+.header-main h1 {
+    color: #3A506B;
+}
